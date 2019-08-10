@@ -1,0 +1,112 @@
+.header-container{
+	padding: 30px 0;
+	position: relative;
+	background-color: $white;
+	box-shadow: 0 6px 24px $bg-header;
+	.container{
+		display: flex;
+		justify-content: center;
+		@include tablet-portrait-and-below{
+			flex-direction: column;
+			align-items: center;
+		} 
+		.header-logo{
+			width: 20%;
+		}
+		.header-inform{
+			display: flex;
+			flex-direction: column;
+			.inform-item{
+				display: flex;
+				align-items: center;
+				@include tablet-portrait-and-below{
+					flex-wrap: wrap;
+					justify-content: center;
+				} 
+				&.company-name{
+					.name{
+						margin-bottom: 0;
+						font-size: 35px;
+						margin-right: 30px;
+					}
+					.start-date{
+						border-radius: 5px;
+						border: 1px solid $blue;
+						color: $blue;
+						padding: 10px;
+					}
+				}
+				&.company-followers{
+					padding: 10px 0;
+					p{
+						margin-right: 31px;
+						font-size: 17px;
+						margin-bottom: 0;
+						@include tablet-portrait-and-below{
+							margin-right: 10px;
+						}							
+						span{
+							font-weight: bold;
+						}
+					}	
+				}
+				&.company-date{
+					padding: 10px 0;
+					@include mobile-only{
+						align-items: center;
+					}
+					p{
+						margin-bottom: 0;
+						@include mobile-only{
+							width: 100%;
+							margin-right: 0;
+							text-align: center;
+						}
+					}
+					&>*{
+						margin-right: 30px;
+						margin-bottom: 0;
+					}
+					label{
+						position: relative;
+						&:before{
+							content:"";
+							position: absolute;
+							right: 0;
+							top: 0;
+							width: 40px;
+							height: 100%;
+							background-position: center;
+							background-color: $input-before;
+							background-repeat: no-repeat;
+							background-image: url(../images/calendar.png);
+							border-radius: 0 10px 10px 0;
+							border: 1px solid $grey;
+						}
+						&:after{
+							content:"";
+							position: absolute;
+							right: 40px;
+							top: 0;
+							width: 40px;
+							height: 100%;
+							background-position: center;
+							background-color: $input-before;
+							background-repeat: no-repeat;
+							background-image: url(../images/close.png);
+							border: 1px solid $grey;
+						}
+						input{
+							border-radius: 10px;
+							outline: none;
+							border: 1px solid $grey;
+							padding: 10px;
+						}
+					}
+
+				}
+
+			}
+		}
+	}
+}
